@@ -11,11 +11,12 @@ namespace MessageLogger
         public int Id {  get; set; }
         public string Content { get; private set; }
         public DateTime CreatedAt { get; private set; }
+       // public User User { get; set; }
 
         public Message(string content)
         {
             Content = content;
-            CreatedAt = DateTime.Now;
+            CreatedAt = DateTime.Now.ToUniversalTime();
         }
     }
 }
