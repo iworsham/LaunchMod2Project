@@ -18,6 +18,11 @@ namespace MessageLogger
                 "Host=localhost;Username=postgres;Password=password123;Database=MessageLogger";
             optionsBuilder.UseNpgsql(connectionString).UseSnakeCaseNamingConvention();
         }
+
+        //protected override void OnModelCreating(ModelBuilder modelBuilder)
+        //{
+        //    modelBuilder.Entity<User>().Navigation( Messages).AutoInclude();
+        //}
     }
 }
 
